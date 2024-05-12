@@ -1,9 +1,11 @@
 package com.example.doit
 
 import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.widget.ImageView
 import android.widget.Toast
 import com.example.doit.databinding.ActivityAddTaskBinding
 import com.example.doit.databinding.ActivityMainBinding
@@ -28,6 +30,13 @@ class AddTask : AppCompatActivity() {
             finish()
             Toast.makeText(this,"Task saved",Toast.LENGTH_SHORT).show()
 
+        }
+
+        val pSkip = findViewById<ImageView>(R.id.pSkip);
+        pSkip.setOnClickListener{
+
+            val intent = Intent(this,MainActivity::class.java);
+            startActivity(intent);
         }
 
     }

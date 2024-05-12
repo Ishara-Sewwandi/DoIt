@@ -1,7 +1,9 @@
 package com.example.doit
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.Toast
 import com.example.doit.databinding.ActivityUpdateBinding
 
@@ -36,6 +38,13 @@ class UpdateActivity : AppCompatActivity() {
             db.updateTask(updatedTask)
             finish()
             Toast.makeText(this, "changes Saved", Toast.LENGTH_SHORT).show()
+        }
+
+        val pSkip1 = findViewById<ImageView>(R.id.pSkip1);
+        pSkip1.setOnClickListener{
+
+            val intent = Intent(this,MainActivity::class.java);
+            startActivity(intent);
         }
     }
 }

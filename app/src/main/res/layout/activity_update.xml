@@ -6,19 +6,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="24dp"
     tools:context=".UpdateActivity">
+
+    <ImageView
+        android:id="@+id/pSkip1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@drawable/angle_circle_left__1_" />
 
     <TextView
         android:id="@+id/editTaskHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@id/pSkip1"
+        android:layout_alignTop="@id/pSkip1"
         android:text="Edit Task"
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="@color/brown"/>
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginTop="16dp"-->
+
 
     <ImageView
         android:id="@+id/updatesavebtn"
